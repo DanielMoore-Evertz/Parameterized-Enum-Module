@@ -1,4 +1,4 @@
-# Parameterized-Enum-Module
+# Parameterized Enums do not import properly using Java Modules on Intellij 2022.2
 A minimal repository containing two intellij projects in which there is an issue with importing parameterized enums that I am unable to find a solution for. Both are running Gradle 8.14.1 and Java SDK JBR17.0.3. This same issue has happened on other repositories I am working on, and has been replicated with minimal interference here.
 
 ### Project owner
