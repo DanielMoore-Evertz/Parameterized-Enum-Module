@@ -1,0 +1,55 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'idea'
+}
+
+group = 'io.github.danielmoore.evertz.parameterizedenummodule'
+version = "1.0"
+sourceCompatibility = 17
+
+/*allprojects {
+    tasks.withType(JavaCompile).each { task ->
+        task.options.encoding = 'UTF-8'
+        task.options.compilerArgs << '-Werror' << '-Xlint:all' << '-Xlint:-processing' << '-Xlint:-serial' << '-Xlint:-exports'
+    }
+}*/
+
+dependencies {
+    implementation 'org.apache.commons:commons-lang3:3.17.0'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+java {
+    withSourcesJar()
+}
+
+configurations {
+    compile.transitive = false
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'java/src/main/java'
+        }
+    }
+}
+
+compileJava.dependsOn(processResources)
