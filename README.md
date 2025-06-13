@@ -2,7 +2,7 @@
 A repository containing two intellij projects in which there is an issue with importing parameterized enums that I am unable to find a solution for. Both are running Gradle 8.14.1 and Java SDK JBR17.0.3.
 
 ### Project owner
-   * [Daniel Moore](danielmoore@evertz.com)
+   * [Daniel Moore](mailto:danielmoore@evertz.com)
 
 This repository showcases an error with importing a parameterized enum using the java module system that I have not been able to find a fix for.
 It is very likely due to the version of intellij I am using or some other local issue, but creating a public repository may help figure out the issue in case it isnt, and may help anyone else who finds the same error, as looking online for my own solution I found nothing of help.
