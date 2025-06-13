@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'java-library'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 17
+
+dependencies {
+    implementation 'io.github.danielmoore.evertz.parameterizedenummodule:java:1.0'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+java {
+    withSourcesJar()
+}
